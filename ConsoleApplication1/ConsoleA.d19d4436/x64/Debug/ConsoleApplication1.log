@@ -1,0 +1,4 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\HAPPYFAMILY\OneDrive\문서\GitHub\maze\ConsoleApplication1\ConsoleApplication1.cpp(258,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\HAPPYFAMILY\OneDrive\문서\GitHub\maze\ConsoleApplication1\ConsoleApplication1.cpp(258,18): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  ConsoleApplication1.vcxproj -> C:\Users\HAPPYFAMILY\OneDrive\문서\GitHub\maze\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
