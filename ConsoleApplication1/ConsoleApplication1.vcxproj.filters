@@ -20,6 +20,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="maze.txt" />
+    <Text Include="maze1.txt" />
+    <Text Include="maze2.txt" />
+    <Text Include="maze3.txt" />
+    <Text Include="maze4.txt" />
   </ItemGroup>
 </Project>

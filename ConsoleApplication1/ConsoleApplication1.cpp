@@ -1,6 +1,7 @@
 ﻿/* 큐 구조_미로 찾기 참고: https://codevang.tistory.com/52 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <windows.h>
 #define SIZE 15
 #define CONSOLE_WIDTH 80
@@ -36,6 +37,7 @@ void CursorView(char hide);
 
 int main()
 {
+	srand(time(NULL));
 	/* 콘솔 창 크기 조절 및 커서 숨기기 */
 	char console_size[30];
 	sprintf_s(console_size,30, "mode con cols=%d lines=%d",
@@ -44,7 +46,8 @@ int main()
 	CursorView(0);
 
 	/*미로 그림 만들기(파일에서 가져오기) */
-	char fileName[9] = "maze.txt";
+	char fileName[10] = { NULL };
+	sprintf_s(fileName, "maze%d.txt", rand()%4+1);
 	char maze[SIZE][SIZE] = { 0 };
 	make_maze(maze, fileName);
 	maze_runner(maze); //길 찾기
@@ -290,7 +293,7 @@ void buffer_print(char maze[][SIZE])
 				front_buffer[i][j] = maze[i][j];
 				// 바뀐 부분은 출력 후 front_buffer에 저장
 			}
-			j2 += 2;
+			j2 += 3; //2로 해야 모양이 이쁜데 그러면 출력이 밀린다..왜?
 		}
 }
 /* 한글자 출력 */
