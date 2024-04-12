@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A46386F0-1325-4AFE-8D4C-F1DEA0EBCB8D}|makeMaze.vcxproj|C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A46386F0-1325-4AFE-8D4C-F1DEA0EBCB8D}|makeMaze.vcxproj|solutionrelative:CMaze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46386F0-1325-4AFE-8D4C-F1DEA0EBCB8D}|makeMaze.vcxproj|C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A46386F0-1325-4AFE-8D4C-F1DEA0EBCB8D}|makeMaze.vcxproj|solutionrelative:CMaze.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46386F0-1325-4AFE-8D4C-F1DEA0EBCB8D}|makeMaze.vcxproj|C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A46386F0-1325-4AFE-8D4C-F1DEA0EBCB8D}|makeMaze.vcxproj|solutionrelative:makeMaze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CMaze.cpp",
+              "DocumentMoniker": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.cpp",
+              "RelativeDocumentMoniker": "CMaze.cpp",
+              "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.cpp",
+              "RelativeToolTip": "CMaze.cpp",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAC0AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-12T05:21:09.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CMaze.h",
+              "DocumentMoniker": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.h",
+              "RelativeDocumentMoniker": "CMaze.h",
+              "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.h",
+              "RelativeToolTip": "CMaze.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-12T05:19:59.431Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "makeMaze.cpp",
+              "DocumentMoniker": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp",
+              "RelativeDocumentMoniker": "makeMaze.cpp",
+              "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp",
+              "RelativeToolTip": "makeMaze.cpp",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-12T03:38:52.344Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
