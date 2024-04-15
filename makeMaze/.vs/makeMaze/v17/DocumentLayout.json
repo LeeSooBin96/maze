@@ -17,11 +17,30 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 200,
+          "DockedWidth": 59,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "makeMaze.cpp",
+              "DocumentMoniker": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp",
+              "RelativeDocumentMoniker": "makeMaze.cpp",
+              "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp",
+              "RelativeToolTip": "makeMaze.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-12T03:38:52.344Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 341,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -36,7 +55,7 @@
               "RelativeDocumentMoniker": "CMaze.cpp",
               "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.cpp",
               "RelativeToolTip": "CMaze.cpp",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAC0AAAAOAAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAIwB4AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-12T05:21:09.461Z",
               "EditorCaption": ""
@@ -49,28 +68,9 @@
               "RelativeDocumentMoniker": "CMaze.h",
               "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\CMaze.h",
               "RelativeToolTip": "CMaze.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAaAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-12T05:19:59.431Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "makeMaze.cpp",
-              "DocumentMoniker": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp",
-              "RelativeDocumentMoniker": "makeMaze.cpp",
-              "ToolTip": "C:\\Users\\Aiot\\Documents\\practice\\makeMaze\\makeMaze.cpp",
-              "RelativeToolTip": "makeMaze.cpp",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-12T03:38:52.344Z",
               "EditorCaption": ""
             }
           ]

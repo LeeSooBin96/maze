@@ -40,10 +40,16 @@ bool CMaze::makeMaze()
 	}
 	srand(time(NULL));
 	
-	for(int i=0;i<10;++i)
-	buildRoad(&start); //길 만들기
-
-	bufferPrint(m_pMaze); //맵 출력
+	for (int i = 0; i < 100; ++i)
+	{
+		if (!buildRoad(&start)&&start->pre!=NULL) { //길 만들기
+			//실패하면 특정시점마다 이전 지점으로 돌림ㅊㅊ
+			if(i%3==0)
+				start = start->pre;
+		}
+		bufferPrint(m_pMaze); //맵 출력
+		cin.get();
+	}
 	return false;
 }
 /* 길 만들기 */
@@ -57,77 +63,53 @@ bool CMaze::buildRoad(location** a)
 	switch (nDir)
 	{
 	case 0: //북
-		if (nRow > 0 && m_pMaze[nCol * m_nSize + nRow - 1] == 1) { //맵의 끝이 아니고 진입점이 벽일때
-			if (nRow == 1 || m_pMaze[nCol * m_nSize+nRow-2]!=1) { //벽 건너편이 벽(1)이 아닐때
-				/* 랜덤으로 뚫기 */
-				if (rand() % 2 == 0) { //50%확률로
-					m_pMaze[nCol * m_nSize + nRow - 1] = 0;
-					*a = createLocation(nRow - 1, nCol, *a);
-					return true;
-				}
-			}
-			else { //벽 건너편이 벽이면 가차없이 뚫자 ㅋㅋ
-				m_pMaze[nCol * m_nSize + nRow - 1] = 0;
-				*a = createLocation(nRow - 1, nCol, *a);
-				return true;
-			}
+		if (isValidRoad(nRow-1,nCol)) { //맵의 끝이 아니고 진입점이 벽일때
+			m_pMaze[nCol * m_nSize + nRow - 1] = 0;
+			*a = createLocation(nRow - 1, nCol, *a);
+			return true;
 		}
 		break;
 	case 1: //동
-		if (nCol < m_nSize-1 && m_pMaze[(nCol+1) * m_nSize + nRow] == 1) { //맵의 끝이 아니고 진입점이 벽일때
-			if (nCol == m_nSize-2 || m_pMaze[(nCol + 2) * m_nSize + nRow] != 1) { //벽 건너편이 벽(1)이 아닐때
-				/* 랜덤으로 뚫기 */
-				if (rand() % 2 == 0) { //50%확률로
-					m_pMaze[(nCol + 1) * m_nSize + nRow] = 0;
-					*a = createLocation(nRow, nCol+1, *a);
-					return true;
-				}
-			}
-			else { //벽 건너편이 벽이면 가차없이 뚫자 ㅋㅋ
-				m_pMaze[(nCol + 1) * m_nSize + nRow] = 0;
-				*a = createLocation(nRow, nCol + 1, *a);
-				return true;
-			}
+		if (isValidRoad(nRow, nCol+1)) { //맵의 끝이 아니고 진입점이 벽일때
+			m_pMaze[(nCol + 1) * m_nSize + nRow] = 0;
+			*a = createLocation(nRow, nCol+1, *a);
+			return true;
 		}
 		break;
 	case 2: //남
-		if (nRow < m_nSize-1 && m_pMaze[nCol * m_nSize + nRow + 1] == 1) { //맵의 끝이 아니고 진입점이 벽일때
-			if (nRow == m_nSize - 2 || m_pMaze[nCol * m_nSize + nRow + 2] != 1) { //벽 건너편이 벽(1)이 아닐때
-				/* 랜덤으로 뚫기 */
-				if (rand() % 2 == 0) { //50%확률로
-					m_pMaze[nCol * m_nSize + nRow + 1] = 0;
-					*a = createLocation(nRow+1, nCol, *a);
-					return true;
-				}
-			}
-			else { //벽 건너편이 벽이면 가차없이 뚫자 ㅋㅋ
-				m_pMaze[nCol * m_nSize + nRow + 1] = 0;
-				*a = createLocation(nRow + 1, nCol, *a);
-				return true;
-			}
+		if (isValidRoad(nRow + 1, nCol)) { //맵의 끝이 아니고 진입점이 벽일때
+			m_pMaze[nCol * m_nSize + nRow + 1] = 0;
+			*a = createLocation(nRow+1, nCol, *a);
+			return true;
 		}
 		break;
 	case 3: //서
-		if (nCol > 0 && m_pMaze[(nCol - 1) * m_nSize + nRow] == 1) { //맵의 끝이 아니고 진입점이 벽일때
-			if (nCol == 1 || m_pMaze[(nCol - 2) * m_nSize + nRow] != 1) { //벽 건너편이 벽(1)이 아닐때
-				/* 랜덤으로 뚫기 */
-				if (rand() % 2 == 0) { //50%확률로
-					m_pMaze[(nCol - 1) * m_nSize + nRow] = 0;
-					*a = createLocation(nRow, nCol-1, *a);
-					return true;
-				}
-			}
-			else { //벽 건너편이 벽이면 가차없이 뚫자 ㅋㅋ
-				m_pMaze[(nCol - 1) * m_nSize + nRow] = 0;
-				*a = createLocation(nRow, nCol - 1, *a);
-				return true;
-			}
+		if (isValidRoad(nRow, nCol-1)) { //맵의 끝이 아니고 진입점이 벽일때
+			m_pMaze[(nCol - 1) * m_nSize + nRow] = 0;
+			*a = createLocation(nRow, nCol-1, *a);
+			return true;
 		}
 		break;
 	default:
 		break;
 	}
 	return false;
+}
+/* 뚫을 수 있는 길인지 확인 */
+/* parameter : 뚫고자 하는 좌표값 */
+/* return : 뚫을 수 있는지 여부 */
+bool CMaze::isValidRoad(int x, int y)
+{
+	unsigned short ckNum = 0; //벽의 개수 저장
+	if (x < 0 || x >= m_nSize || y < 0 || y >= m_nSize) return false; //뚫을 지점이 맵 밖이면
+	if (m_pMaze[y * m_nSize + x] == 1) ckNum++; //뚫을 지점이 벽이면
+	if (x >= 1 && m_pMaze[y * m_nSize + x - 1] == 1) ckNum++;//북
+	if (y < m_nSize && m_pMaze[(y + 1) * m_nSize + x] == 1) ckNum++;//동
+	if (x < m_nSize && m_pMaze[y * m_nSize + x + 1] == 1) ckNum++;//남
+	if (y >= 1 && m_pMaze[(y - 1) * m_nSize + x] == 1) ckNum++;//서
+	
+	if (ckNum > 2) return true;
+	else return false;
 }
 /* 신규 location 1개 생성 */
 /* parameter : row, col 좌표값, 현재 좌표 */

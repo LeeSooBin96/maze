@@ -25,6 +25,7 @@ class CMaze
 	/* 필요한 멤버 함수 */
 	void initializeMaze(char* maze, char c);
 	bool buildRoad(location** a);
+	bool isValidRoad(int x, int y);
 
 	location* createLocation(int row, int col, location* a);
 	findPoint* createFind(location* a);
